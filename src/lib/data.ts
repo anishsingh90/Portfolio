@@ -6,7 +6,7 @@ export const personalData = {
   title: 'Blockchain Developer',
   email: 'anish.kumar@example.com',
   linkedin: 'https://linkedin.com/in/anishkumar',
-  github: 'https://github.com/anishkumar',
+  github: 'https://github.com/anishsingh90',
   twitter: 'https://twitter.com/anishkumar',
   profileImage: 'https://placehold.co/300x300.png',
 };
@@ -35,7 +35,7 @@ export const projects = [
     description: 'A secure and transparent voting application built on the Ethereum blockchain, ensuring tamper-proof results.',
     technologies: ['Solidity', 'React', 'Ethers.js', 'Hardhat', 'IPFS'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishkumar/d-vote',
+    github: 'https://github.com/anishsingh90/d-vote',
     liveDemo: 'https://d-vote.anishkumar.dev',
     dataAiHint: 'blockchain network'
   },
@@ -44,7 +44,7 @@ export const projects = [
     description: 'A full-featured platform for minting, buying, and selling Non-Fungible Tokens (NFTs) with low gas fees.',
     technologies: ['Next.js', 'TypeScript', 'Solidity', 'Polygon', 'Tailwind CSS'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishkumar/nft-market',
+    github: 'https://github.com/anishsingh90/nft-market',
     liveDemo: 'https://nft-market.anishkumar.dev',
     dataAiHint: 'digital art'
   },
@@ -53,7 +53,7 @@ export const projects = [
     description: 'A decentralized lending and borrowing protocol that allows users to earn interest on deposits and borrow assets.',
     technologies: ['Solidity', 'React', 'Web3.js', 'Chainlink Oracles', 'Aave'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishkumar/defi-lending',
+    github: 'https://github.com/anishsingh90/defi-lending',
     liveDemo: 'https://defi-lending.anishkumar.dev',
     dataAiHint: 'finance crypto'
   },
