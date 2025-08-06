@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -87,9 +88,9 @@ export default async function Home() {
           {/* Projects Section */}
           <section id="projects" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 [perspective:1000px]">
               {projects.map((project) => (
-                <Card key={project.title} className="flex flex-col overflow-hidden group hover:scale-105 transition-transform duration-300">
+                <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-500 hover:[transform:rotateY(10deg)] hover:shadow-2xl hover:shadow-primary/40 [transform-style:preserve-3d]">
                   <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
                   <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
