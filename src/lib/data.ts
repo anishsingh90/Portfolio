@@ -5,7 +5,7 @@ export const personalData = {
   name: 'Anish Kumar',
   title: 'Blockchain Developer',
   email: 'anish.kumar@example.com',
-  linkedin: 'https://linkedin.com/in/anishkumar',
+  linkedin: 'https://www.linkedin.com/in/anish90',
   github: 'https://github.com/anishsingh90',
   twitter: 'https://twitter.com/anishkumar',
   profileImage: 'https://placehold.co/300x300.png',
