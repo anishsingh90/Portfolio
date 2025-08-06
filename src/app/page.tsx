@@ -4,8 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { generatePersonalizedGreeting } from '@/ai/flows/personalized-greeting';
-import { generatePortfolioSummary } from '@/ai/flows/portfolio-summary';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalData, skills, projects, achievements, timeline, passions, socialLinks } from '@/lib/data';
@@ -24,10 +22,10 @@ export default async function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container mx-auto px-4 md:px-6 [perspective:1000px]">
+        <div className="container mx-auto px-4 md:px-6">
 
           {/* About Section */}
-          <section id="about" className="py-20 md:py-32 grid md:grid-cols-5 gap-8 items-center transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg">
+          <section id="about" className="py-20 md:py-32 grid md:grid-cols-5 gap-8 items-center">
             <div className="md:col-span-3 space-y-4">
               <Badge variant="secondary" className="text-base">{greeting}</Badge>
               <h1 className="text-4xl md:text-6xl font-bold text-primary font-headline">
@@ -65,128 +63,148 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Skills Section */}
-          <section id="skills" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="skills" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">My Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Object.entries(skills).map(([category, skillList]) => (
-                <Card key={category} className="hover:shadow-xl transition-shadow duration-300 bg-transparent">
-                  <CardHeader>
-                    <CardTitle className="text-primary">{category}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-wrap gap-2">
-                    {skillList.map(skill => (
-                      <Badge key={skill} variant="secondary">{skill}</Badge>
-                    ))}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card className="bg-card/50">
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Object.entries(skills).map(([category, skillList]) => (
+                    <Card key={category} className="hover:shadow-xl transition-shadow duration-300 bg-transparent">
+                      <CardHeader>
+                        <CardTitle className="text-primary">{category}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex flex-wrap gap-2">
+                        {skillList.map(skill => (
+                          <Badge key={skill} variant="secondary">{skill}</Badge>
+                        ))}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
           <Separator className="my-12" />
 
           {/* Projects Section */}
-          <section id="projects" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="projects" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project) => (
-                <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-500 hover:[transform:rotateY(10deg)] hover:shadow-2xl hover:shadow-primary/40 [transform-style:preserve-3d] bg-card">
-                  <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
-                  <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow flex flex-col">
-                    <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map(tech => (
-                        <Badge key={tech} variant="outline">{tech}</Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-4 mt-auto pt-4">
-                      <Button asChild variant="ghost" size="sm">
-                        <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" /> GitHub
-                        </Link>
-                      </Button>
-                      <Button asChild variant="ghost" size="sm">
-                        <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card className="bg-card/50">
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {projects.map((project) => (
+                    <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 bg-card">
+                      <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
+                      <CardHeader>
+                        <CardTitle>{project.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow flex flex-col">
+                        <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.technologies.map(tech => (
+                            <Badge key={tech} variant="outline">{tech}</Badge>
+                          ))}
+                        </div>
+                        <div className="flex gap-4 mt-auto pt-4">
+                          <Button asChild variant="ghost" size="sm">
+                            <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                              <Github className="mr-2 h-4 w-4" /> GitHub
+                            </Link>
+                          </Button>
+                          <Button asChild variant="ghost" size="sm">
+                            <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                            </Link>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
           <Separator className="my-12" />
 
           {/* Achievements Section */}
-          <section id="achievements" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="achievements" className="py-16">
              <h2 className="text-3xl font-bold text-center mb-12 font-headline">Key Achievements</h2>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {achievements.map((achievement) => (
-                    <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 bg-card/50">
-                        <div className="flex justify-center mb-4">
-                            <achievement.icon className="h-12 w-12 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-2">{achievement.date}</p>
-                        <p className="text-muted-foreground">{achievement.description}</p>
-                    </Card>
-                ))}
-             </div>
+            <Card className="bg-card/50">
+              <CardContent className="p-6">
+                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {achievements.map((achievement) => (
+                        <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 bg-card/50">
+                            <div className="flex justify-center mb-4">
+                                <achievement.icon className="h-12 w-12 text-primary" />
+                            </div>
+                            <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
+                            <p className="text-sm text-muted-foreground mb-2">{achievement.date}</p>
+                            <p className="text-muted-foreground">{achievement.description}</p>
+                        </Card>
+                    ))}
+                 </div>
+              </CardContent>
+            </Card>
           </section>
           
           <Separator className="my-12" />
 
           {/* Timeline Section */}
-          <section id="timeline" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="timeline" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-16 font-headline">My Journey</h2>
-            <div className="relative max-w-2xl mx-auto">
-              <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
-              {timeline.map((item, index) => (
-                <div key={item.title} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-                  <div className="order-1 w-5/12"></div>
-                  <div className="z-10 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full">
-                    <item.icon className="mx-auto text-primary-foreground h-6 w-6"/>
-                  </div>
-                  <div className="order-1 bg-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                    <p className="text-sm text-muted-foreground mb-1">{item.date}</p>
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <h4 className="font-medium text-primary">{item.company}</h4>
-                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
-                  </div>
+            <Card className="bg-card/50">
+              <CardContent className="p-6">
+                <div className="relative max-w-2xl mx-auto">
+                  <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
+                  {timeline.map((item, index) => (
+                    <div key={item.title} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                      <div className="order-1 w-5/12"></div>
+                      <div className="z-10 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full">
+                        <item.icon className="mx-auto text-primary-foreground h-6 w-6"/>
+                      </div>
+                      <div className="order-1 bg-card rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <p className="text-sm text-muted-foreground mb-1">{item.date}</p>
+                        <h3 className="font-bold text-lg">{item.title}</h3>
+                        <h4 className="font-medium text-primary">{item.company}</h4>
+                        <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </CardContent>
+            </Card>
           </section>
           
           <Separator className="my-12" />
           
           {/* Passions Section */}
-          <section id="passions" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="passions" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Passions & Interests</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {passions.map((passion) => (
-                <div key={passion.title} className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <passion.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">{passion.title}</h3>
-                    <p className="text-muted-foreground mt-1">{passion.description}</p>
-                  </div>
+            <Card className="bg-card/50">
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {passions.map((passion) => (
+                    <div key={passion.title} className="flex items-start gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <passion.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold">{passion.title}</h3>
+                        <p className="text-muted-foreground mt-1">{passion.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </CardContent>
+            </Card>
           </section>
 
           <Separator className="my-12" />
 
           {/* Connect Section */}
-          <section id="connect" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
+          <section id="connect" className="py-16">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Connect With Me</h2>
             <Card className="max-w-2xl mx-auto bg-card/50">
               <CardContent className="pt-6">
