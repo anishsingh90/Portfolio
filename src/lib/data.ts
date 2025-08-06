@@ -18,6 +18,7 @@ export const navLinks = [
   { href: '#achievements', label: 'Achievements' },
   { href: '#timeline', label: 'Timeline' },
   { href: '#passions', label: 'Passions' },
+  { href: '#connect', label: 'Connect' },
 ];
 
 export const skills = {

@@ -9,7 +9,10 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalData, skills, projects, achievements, timeline, passions, socialLinks } from '@/lib/data';
 import Link from 'next/link';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Send } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
 export default async function Home() {
   const greeting = "Hello, Recruiter!";
@@ -178,6 +181,40 @@ export default async function Home() {
               ))}
             </div>
           </section>
+
+          <Separator className="my-12" />
+
+          {/* Connect Section */}
+          <section id="connect" className="py-16">
+            <h2 className="text-3xl font-bold text-center mb-12 font-headline">Connect With Me</h2>
+            <Card className="max-w-2xl mx-auto">
+              <CardContent className="pt-6">
+                <form className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" placeholder="Enter your name" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" type="email" placeholder="Enter your email" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" placeholder="Your message" className="min-h-[150px]" />
+                  </div>
+                  <div className="flex justify-end">
+                    <Button type="submit">
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </section>
+
         </div>
       </main>
       <Footer />
