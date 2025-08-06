@@ -41,7 +41,7 @@ export function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+      isScrolled ? "bg-card/80 backdrop-blur-sm shadow-md border-b border-border/20" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
@@ -69,7 +69,7 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-sm pb-4">
+        <div className="md:hidden bg-card/95 backdrop-blur-sm pb-4">
           <nav className="flex flex-col items-center gap-4">
             {navLinks.map(link => (
               <Link

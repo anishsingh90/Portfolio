@@ -60,24 +60,24 @@ export default async function Home() {
             </div>
           </section>
           
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
 
           {/* Skills Section */}
           <section id="skills" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">My Skills</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {Object.entries(skills).map(([category, skillList]) => (
-                    <Card key={category} className="hover:shadow-xl transition-shadow duration-300 bg-transparent">
+                    <Card key={category} className="hover:shadow-lg transition-shadow duration-300 bg-card/60 border-border/30">
                       <CardHeader>
                         <CardTitle className="text-primary">{category}</CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-wrap gap-2">
                         {skillList.map(skill => (
-                          <Badge key={skill} variant="secondary">{skill}</Badge>
+                          <Badge key={skill} variant="secondary" className="hover:bg-primary/80 hover:text-primary-foreground transition-colors">{skill}</Badge>
                         ))}
                       </CardContent>
                     </Card>
@@ -87,18 +87,18 @@ export default async function Home() {
             </Card>
           </section>
 
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
 
           {/* Projects Section */}
           <section id="projects" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Projects</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {projects.map((project) => (
-                    <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 bg-card">
+                    <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
                       <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
                       <CardHeader>
                         <CardTitle>{project.title}</CardTitle>
@@ -130,18 +130,18 @@ export default async function Home() {
             </Card>
           </section>
 
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
 
           {/* Achievements Section */}
           <section id="achievements" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Key Achievements</CardTitle>
               </CardHeader>
               <CardContent>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {achievements.map((achievement) => (
-                        <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 bg-card/50">
+                        <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 bg-card/60 hover:-translate-y-2 border-border/30">
                             <div className="flex justify-center mb-4">
                                 <achievement.icon className="h-12 w-12 text-primary" />
                             </div>
@@ -155,11 +155,11 @@ export default async function Home() {
             </Card>
           </section>
           
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
 
           {/* Timeline Section */}
           <section id="timeline" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-10 font-headline">My Journey</CardTitle>
               </CardHeader>
@@ -172,7 +172,7 @@ export default async function Home() {
                       <div className="z-10 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full">
                         <item.icon className="mx-auto text-primary-foreground h-6 w-6"/>
                       </div>
-                      <div className="order-1 bg-card rounded-lg shadow-xl w-5/12 px-6 py-4">
+                      <div className="order-1 bg-card/80 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-border/30">
                         <p className="text-sm text-muted-foreground mb-1">{item.date}</p>
                         <h3 className="font-bold text-lg">{item.title}</h3>
                         <h4 className="font-medium text-primary">{item.company}</h4>
@@ -185,18 +185,18 @@ export default async function Home() {
             </Card>
           </section>
           
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
           
           {/* Passions Section */}
           <section id="passions" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Passions & Interests</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {passions.map((passion) => (
-                    <div key={passion.title} className="flex items-start gap-4">
+                    <div key={passion.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-card/70 transition-colors">
                       <div className="bg-primary/10 p-3 rounded-full">
                         <passion.icon className="h-6 w-6 text-primary" />
                       </div>
@@ -211,11 +211,11 @@ export default async function Home() {
             </Card>
           </section>
 
-          <Separator className="my-12" />
+          <Separator className="my-12 bg-border/20" />
 
           {/* Connect Section */}
           <section id="connect" className="py-16">
-            <Card className="max-w-2xl mx-auto bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card className="max-w-2xl mx-auto bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Connect With Me</CardTitle>
               </CardHeader>
