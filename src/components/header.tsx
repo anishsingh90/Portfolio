@@ -6,8 +6,10 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/data';
+import { useWallet } from '@/context/wallet-context';
 
 export function Header() {
+  const { account, connectWallet, disconnectWallet } = useWallet();
   const [activeSection, setActiveSection] = useState('about');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,40 +51,53 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(link => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={handleLinkClick}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground'
-              )}
-            >
-              {link.label}
-            </Link>
+             (account || link.href === '#about') && (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={handleLinkClick}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground'
+                )}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
         </nav>
-        <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+        <div className="flex items-center gap-2">
+            {account ? (
+              <Button onClick={disconnectWallet} variant="outline">
+                {`${account.substring(0, 6)}...${account.substring(account.length - 4)}`}
+              </Button>
+            ) : (
+              <Button onClick={connectWallet}>Connect Wallet</Button>
+            )}
+            <div className="md:hidden">
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+            </div>
         </div>
       </div>
       {isMenuOpen && (
         <div className="md:hidden bg-card/95 backdrop-blur-sm pb-4">
           <nav className="flex flex-col items-center gap-4">
             {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={handleLinkClick}
-                className={cn(
-                  "text-lg font-medium transition-colors hover:text-primary",
-                  activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground'
-                )}
-              >
-                {link.label}
-              </Link>
+              (account || link.href === '#about') && (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={cn(
+                    "text-lg font-medium transition-colors hover:text-primary",
+                    activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground'
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>
