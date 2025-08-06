@@ -1,0 +1,45 @@
+
+[
+  {
+    "inputs": [],
+    "name": "getProjects",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tags",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "githubLink",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "liveDemoLink",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct ProjectRegistry.Project[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
+
+    
