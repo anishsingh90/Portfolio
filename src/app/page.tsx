@@ -24,10 +24,10 @@ export default async function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 [perspective:1000px]">
 
           {/* About Section */}
-          <section id="about" className="py-20 md:py-32 grid md:grid-cols-5 gap-8 items-center">
+          <section id="about" className="py-20 md:py-32 grid md:grid-cols-5 gap-8 items-center transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg">
             <div className="md:col-span-3 space-y-4">
               <Badge variant="secondary" className="text-base">{greeting}</Badge>
               <h1 className="text-4xl md:text-6xl font-bold text-primary font-headline">
@@ -65,11 +65,11 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Skills Section */}
-          <section id="skills" className="py-16">
+          <section id="skills" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">My Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {Object.entries(skills).map(([category, skillList]) => (
-                <Card key={category} className="hover:shadow-xl transition-shadow duration-300">
+                <Card key={category} className="hover:shadow-xl transition-shadow duration-300 bg-transparent">
                   <CardHeader>
                     <CardTitle className="text-primary">{category}</CardTitle>
                   </CardHeader>
@@ -86,11 +86,11 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Projects Section */}
-          <section id="projects" className="py-16">
+          <section id="projects" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 [perspective:1000px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-500 hover:[transform:rotateY(10deg)] hover:shadow-2xl hover:shadow-primary/40 [transform-style:preserve-3d]">
+                <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-500 hover:[transform:rotateY(10deg)] hover:shadow-2xl hover:shadow-primary/40 [transform-style:preserve-3d] bg-card">
                   <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
                   <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
@@ -123,11 +123,11 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Achievements Section */}
-          <section id="achievements" className="py-16">
+          <section id="achievements" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
              <h2 className="text-3xl font-bold text-center mb-12 font-headline">Key Achievements</h2>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {achievements.map((achievement) => (
-                    <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
+                    <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 bg-card/50">
                         <div className="flex justify-center mb-4">
                             <achievement.icon className="h-12 w-12 text-primary" />
                         </div>
@@ -142,7 +142,7 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Timeline Section */}
-          <section id="timeline" className="py-16">
+          <section id="timeline" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
             <h2 className="text-3xl font-bold text-center mb-16 font-headline">My Journey</h2>
             <div className="relative max-w-2xl mx-auto">
               <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
@@ -166,7 +166,7 @@ export default async function Home() {
           <Separator className="my-12" />
           
           {/* Passions Section */}
-          <section id="passions" className="py-16">
+          <section id="passions" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-2deg)] hover:bg-card/10 rounded-lg p-6">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Passions & Interests</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {passions.map((passion) => (
@@ -186,9 +186,9 @@ export default async function Home() {
           <Separator className="my-12" />
 
           {/* Connect Section */}
-          <section id="connect" className="py-16">
+          <section id="connect" className="py-16 transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(2deg)] hover:bg-card/10 rounded-lg p-6">
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Connect With Me</h2>
-            <Card className="max-w-2xl mx-auto">
+            <Card className="max-w-2xl mx-auto bg-card/50">
               <CardContent className="pt-6">
                 <form className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
