@@ -64,9 +64,11 @@ export default async function Home() {
 
           {/* Skills Section */}
           <section id="skills" className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-12 font-headline">My Skills</h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">My Skills</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {Object.entries(skills).map(([category, skillList]) => (
                     <Card key={category} className="hover:shadow-xl transition-shadow duration-300 bg-transparent">
@@ -89,9 +91,11 @@ export default async function Home() {
 
           {/* Projects Section */}
           <section id="projects" className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-12 font-headline">Projects</h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Projects</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {projects.map((project) => (
                     <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 bg-card">
@@ -130,9 +134,11 @@ export default async function Home() {
 
           {/* Achievements Section */}
           <section id="achievements" className="py-16">
-             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Key Achievements</h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Key Achievements</CardTitle>
+              </CardHeader>
+              <CardContent>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {achievements.map((achievement) => (
                         <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 bg-card/50">
@@ -153,9 +159,11 @@ export default async function Home() {
 
           {/* Timeline Section */}
           <section id="timeline" className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-16 font-headline">My Journey</h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-10 font-headline">My Journey</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="relative max-w-2xl mx-auto">
                   <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
                   {timeline.map((item, index) => (
@@ -181,9 +189,11 @@ export default async function Home() {
           
           {/* Passions Section */}
           <section id="passions" className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-12 font-headline">Passions & Interests</h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
+            <Card className="bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Passions & Interests</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {passions.map((passion) => (
                     <div key={passion.title} className="flex items-start gap-4">
@@ -205,9 +215,11 @@ export default async function Home() {
 
           {/* Connect Section */}
           <section id="connect" className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-12 font-headline">Connect With Me</h2>
-            <Card className="max-w-2xl mx-auto bg-card/50">
-              <CardContent className="pt-6">
+            <Card className="max-w-2xl mx-auto bg-card/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Connect With Me</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <form className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
