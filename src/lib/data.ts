@@ -22,10 +22,10 @@ export const navLinks = [
 ];
 
 export const skills = {
-  'Languages': ['Solidity', 'JavaScript', 'Python', 'C', 'C++'],
+  'Languages': ['Solidity', 'JavaScript', 'C', 'C++'],
   'Frameworks & Libraries': ['React', 'Next.js', 'Node.js', 'Express.js', 'Hardhat', 'Truffle', 'Ethers.js', 'Web3.js'],
   'Databases': ['GraphQL', 'MongoDB', 'MySQL'],
-  'Tools & Platforms': ['RemixIDE', 'Infura','Alchemy', 'VS-Code', 'ThirdwebSDK', 'Git & GitHube', 'Oracles'],
+  'Tools & Platforms': ['RemixIDE', 'Infura','Alchemy', 'VS-Code', 'ThirdwebSDK', 'Git & GitHub', 'Oracles'],
   'Blockchain': ['Ethereum', 'Hyperledger Fabric', 'Smart Contracts', 'DeFi', 'NFTs', 'Metaverse', 'Cryptography', 'Merkle Tree'],
 };
 
