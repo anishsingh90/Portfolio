@@ -4,7 +4,7 @@ import { EthereumIcon } from '@/components/icons';
 export const personalData = {
   name: 'Anish Kumar',
   title: 'Blockchain Developer',
-  email: 'anish.kumar@example.com',
+  email: 'anishraaz90@gmail.com',
   linkedin: 'https://www.linkedin.com/in/anish90',
   github: 'https://github.com/anishsingh90',
   twitter: 'https://twitter.com/AnishSingh9454',
@@ -22,11 +22,11 @@ export const navLinks = [
 ];
 
 export const skills = {
-  'Languages': ['JavaScript', 'TypeScript', 'Solidity', 'Python', 'Go'],
+  'Languages': ['Solidity', 'JavaScript', 'Python', 'C', 'C++'],
   'Frameworks & Libraries': ['React', 'Next.js', 'Node.js', 'Express.js', 'Hardhat', 'Truffle', 'Ethers.js', 'Web3.js'],
-  'Databases': ['PostgreSQL', 'MongoDB', 'Firebase'],
-  'Tools & Platforms': ['Docker', 'Kubernetes', 'AWS', 'Google Cloud', 'Git', 'Jenkins'],
-  'Blockchain': ['Ethereum', 'Hyperledger Fabric', 'Smart Contracts', 'DeFi', 'NFTs', 'Oracles'],
+  'Databases': ['GraphQL', 'MongoDB', 'MySQL'],
+  'Tools & Platforms': ['RemixIDE', 'Infura','Alchemy', 'VS-Code', 'ThirdwebSDK', 'Git & GitHube', 'Oracles'],
+  'Blockchain': ['Ethereum', 'Hyperledger Fabric', 'Smart Contracts', 'DeFi', 'NFTs', 'Metaverse', 'Cryptography', 'Merkle Tree'],
 };
 
 export const projects = [
@@ -62,14 +62,14 @@ export const projects = [
 export const achievements = [
     {
         icon: Award,
-        title: 'ETHGlobal Hackathon Winner',
-        date: '2023',
-        description: 'First place for developing an innovative DeFi protocol for undercollateralized loans.'
+        title: 'YourStory Digital Innovation Hackathon Winner',
+        date: '2024',
+        description: 'First place for developing an innovative decentralized application(dApps) which is "Decentralized Crowdfunding Application(dApps)"'
     },
     {
         icon: Github,
         title: 'Top Open Source Contributor',
-        date: '2022',
+        date: '2025',
         description: 'Recognized for significant contributions to the Hyperledger Fabric project.'
     },
     {
@@ -84,9 +84,9 @@ export const timeline = [
   {
     icon: Briefcase,
     category: 'Experience',
-    date: '2021 - Present',
-    title: 'Senior Blockchain Developer',
-    company: 'InnovateChain Solutions',
+    date: 'July 2025 - Present',
+    title: 'Blockchain Community Intern',
+    company: 'Trikon',
     description: 'Lead developer for enterprise-grade blockchain applications. Designed and implemented scalable smart contracts and backend systems.'
   },
   {
