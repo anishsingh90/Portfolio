@@ -8,7 +8,8 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   const ProjectRegistry = await ethers.getContractFactory("ProjectRegistry");
-  const projectRegistry = await ProjectRegistry.deploy();
+  // Pass deployer's address to the constructor
+  const projectRegistry = await ProjectRegistry.deploy(deployer.address);
 
   await projectRegistry.waitForDeployment();
 
@@ -17,21 +18,27 @@ async function main() {
   
   // You can now call functions to add initial data if needed
   console.log("Adding initial projects...");
-  await projectRegistry.addProject(
+  const tx1 = await projectRegistry.addProject(
     "Decentralized Voting System",
     "A secure and transparent voting application built on the Ethereum blockchain, ensuring tamper-proof results.",
     ["Solidity", "React", "Ethers.js", "Hardhat", "IPFS"],
     "https://github.com/anishsingh90/d-vote",
     "https://d-vote.anishkumar.dev"
   );
-   await projectRegistry.addProject(
+  await tx1.wait();
+  console.log("Added project: Decentralized Voting System");
+
+  const tx2 = await projectRegistry.addProject(
     "NFT Marketplace",
     "A full-featured platform for minting, buying, and selling Non-Fungible Tokens (NFTs) with low gas fees.",
     ["Next.js", "TypeScript", "Solidity", "Polygon", "Tailwind CSS"],
     "https://github.com/anishsingh90/nft-market",
     "https://nft-market.anishkumar.dev"
   );
-  console.log("Initial projects added.");
+  await tx2.wait();
+  console.log("Added project: NFT Marketplace");
+
+  console.log("Initial projects added successfully.");
 }
 
 main()

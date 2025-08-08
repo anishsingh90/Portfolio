@@ -73,18 +73,26 @@ export default function Home() {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      if (provider && account && PROJECT_REGISTRY_ADDRESS !== 'YOUR_CONTRACT_ADDRESS_HERE') {
+      if (provider && account && PROJECT_REGISTRY_ADDRESS && PROJECT_REGISTRY_ADDRESS !== 'YOUR_CONTRACT_ADDRESS_HERE') {
         setIsLoadingProjects(true);
         try {
-          const signer = await provider.getSigner();
-          const contract = ProjectRegistry__factory.connect(PROJECT_REGISTRY_ADDRESS, signer);
+          // A provider can be used to query the blockchain, but a signer is needed to write to it.
+          // For view-only functions, the provider is sufficient.
+          const contract = ProjectRegistry__factory.connect(PROJECT_REGISTRY_ADDRESS, provider);
+          
+          // Check if the contract code exists at the address
+          const code = await provider.getCode(PROJECT_REGISTRY_ADDRESS);
+          if (code === '0x') {
+             throw new Error("Contract not found at this address. Please check the address and network.");
+          }
+          
           const onChainProjects = await contract.getProjects();
           setProjects(onChainProjects);
-        } catch (error) {
+        } catch (error: any) {
           console.error("Failed to fetch projects from blockchain:", error);
            toast({
             title: "Blockchain Error",
-            description: "Could not fetch projects from the contract. Please ensure it's deployed and the address is correct.",
+            description: error.message || "Could not fetch projects. Please ensure the contract address is correct and you are on the right network.",
             variant: "destructive",
           });
         } finally {
@@ -129,7 +137,7 @@ export default function Home() {
             </div>
             <div className="md:col-span-2 flex justify-center">
               <Image
-                src={personalData.profileImage}
+                src={"/profilepicture.jpg"}
                 alt={personalData.name}
                 width={300}
                 height={300}
@@ -180,7 +188,7 @@ export default function Home() {
                     {isLoadingProjects ? (
                        <p className="text-center text-muted-foreground">Loading projects from the blockchain...</p>
                     ) : projects.length === 0 ? (
-                      <p className="text-center text-muted-foreground">No projects found on-chain. Deploy the contract and add projects.</p>
+                      <p className="text-center text-muted-foreground">No projects found on-chain. Please redeploy the contract or ensure you're on the correct network.</p>
                     ) : (
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project, index) => (
@@ -381,5 +389,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
