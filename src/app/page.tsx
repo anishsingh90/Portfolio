@@ -109,51 +109,52 @@ export default function Home() {
             </div>
           </section>
 
-          <Separator className="my-12 bg-border/20" />
-
-          {/* Projects Section - Now Public */}
-          <section id="projects" className="py-16">
-            <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
-              <CardHeader>
-                <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Projects</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {localProjects.map((project, index) => (
-                    <Card key={index} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
-                      <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
-                      <CardHeader>
-                        <CardTitle>{project.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow flex flex-col">
-                        <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.technologies.map(tag => (
-                            <Badge key={tag} variant="outline">{tag}</Badge>
-                          ))}
-                        </div>
-                        <div className="flex gap-4 mt-auto pt-4">
-                          <Button asChild variant="ghost" size="sm">
-                            <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                              <Github className="mr-2 h-4 w-4" /> GitHub
-                            </Link>
-                          </Button>
-                          <Button asChild variant="ghost" size="sm">
-                            <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                            </Link>
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </section>
           
           {account ? (
             <>
+              <Separator className="my-12 bg-border/20" />
+
+              {/* Projects Section */}
+              <section id="projects" className="py-16">
+                <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                  <CardHeader>
+                    <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Projects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {localProjects.map((project, index) => (
+                        <Card key={index} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
+                          <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-48 object-cover" data-ai-hint={project.dataAiHint}/>
+                          <CardHeader>
+                            <CardTitle>{project.title}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="flex-grow flex flex-col">
+                            <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {project.technologies.map(tag => (
+                                <Badge key={tag} variant="outline">{tag}</Badge>
+                              ))}
+                            </div>
+                            <div className="flex gap-4 mt-auto pt-4">
+                              <Button asChild variant="ghost" size="sm">
+                                <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                                  <Github className="mr-2 h-4 w-4" /> GitHub
+                                </Link>
+                              </Button>
+                              <Button asChild variant="ghost" size="sm">
+                                <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                                  <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                                </Link>
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </section>
+
               <Separator className="my-12 bg-border/20" />
 
               {/* Skills Section */}
@@ -328,15 +329,18 @@ export default function Home() {
               </section>
             </>
           ) : (
-             <div className="text-center py-40">
-                <Card className="max-w-md mx-auto bg-card/50 shadow-lg border-border/20 p-8">
-                    <CardTitle className="text-2xl font-bold mb-4 font-headline">Welcome to My Portfolio</CardTitle>
-                    <CardDescription className="text-muted-foreground mb-6">
-                        Please connect your wallet to view my skills, achievements, and other content.
-                    </CardDescription>
-                    {/* The connect button is in the header */}
-                </Card>
-             </div>
+             <>
+                <Separator className="my-12 bg-border/20" />
+                <div className="text-center py-40">
+                    <Card className="max-w-md mx-auto bg-card/50 shadow-lg border-border/20 p-8">
+                        <CardTitle className="text-2xl font-bold mb-4 font-headline">Welcome to My Portfolio</CardTitle>
+                        <CardDescription className="text-muted-foreground mb-6">
+                            Please connect your wallet to view my projects, skills, achievements, and other content.
+                        </CardDescription>
+                        {/* The connect button is in the header */}
+                    </Card>
+                </div>
+             </>
           )}
 
         </div>
