@@ -13,8 +13,8 @@ export const personalData = {
 
 export const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
   { href: '#achievements', label: 'Achievements' },
   { href: '#timeline', label: 'Timeline' },
   { href: '#passions', label: 'Passions' },

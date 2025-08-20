@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -51,7 +52,7 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(link => (
-             (account || link.href === '#about') && (
+             (account || link.href === '#about' || link.href === '#projects') && (
               <Link
                 key={link.href}
                 href={link.href}
@@ -85,7 +86,7 @@ export function Header() {
         <div className="md:hidden bg-card/95 backdrop-blur-sm pb-4">
           <nav className="flex flex-col items-center gap-4">
             {navLinks.map(link => (
-              (account || link.href === '#about') && (
+              (account || link.href === '#about' || link.href === '#projects') && (
                 <Link
                   key={link.href}
                   href={link.href}
