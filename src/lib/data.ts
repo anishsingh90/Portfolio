@@ -29,7 +29,7 @@ export const skills = {
   'Blockchain': ['Ethereum', 'Hyperledger Fabric', 'Smart Contracts', 'DeFi', 'NFTs', 'Metaverse', 'Cryptography', 'Merkle Tree'],
 };
 
-export const projects = [
+export const localProjects = [
   {
     title: 'Decentralized Voting System',
     description: 'A secure and transparent voting application built on the Ethereum blockchain, ensuring tamper-proof results.',
@@ -151,5 +151,3 @@ export const socialLinks = {
     icon: Twitter
   }
 };
-
-export const projects as localProjects = projects;

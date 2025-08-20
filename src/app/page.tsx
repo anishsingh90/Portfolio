@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -10,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalData, skills, achievements, timeline, passions, socialLinks, projects as localProjects } from '@/lib/data';
+import { personalData, skills, achievements, timeline, passions, socialLinks, localProjects } from '@/lib/data';
 import Link from 'next/link';
 import { ExternalLink, Github, Send, Wallet } from 'lucide-react';
 import { Input } from '@/components/ui/input';
