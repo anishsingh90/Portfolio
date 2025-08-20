@@ -151,3 +151,5 @@ export const socialLinks = {
     icon: Twitter
   }
 };
+
+export const projects as localProjects = projects;
