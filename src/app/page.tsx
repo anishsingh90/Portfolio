@@ -43,6 +43,7 @@ export default function Home() {
     const { name, mobile, message } = contactForm;
     const mailtoLink = `mailto:${personalData.email}?subject=Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${name}%0D%0AMobile: ${mobile}`;
     window.location.href = mailtoLink;
+    setContactForm({ name: '', mobile: '', message: '' });
   };
 
 
