@@ -105,27 +105,6 @@ export const timeline = [
 export const certifications = [
   {
     icon: Award,
-    title: 'Blockchain & Smart Contracts',
-    company: 'Infosys Springboard',
-    date: '2024',
-    description: 'Completed a comprehensive program on blockchain fundamentals and smart contract development.'
-  },
-  {
-    icon: Award,
-    title: 'Ethereum & Solidity Developer Program',
-    company: 'Infosys Springboard',
-    date: '2024',
-    description: 'Specialized training in building decentralized applications on the Ethereum platform using Solidity.'
-  },
-  {
-    icon: Award,
-    title: 'Cryptography (CRISC 2023)',
-    company: 'Infosys Springboard',
-    date: '2024',
-    description: 'Successfully completed specialized training in cryptography, covering encryption techniques, secure communication, and data protection methods aligned with industry practices.'
-  },
-  {
-    icon: Award,
     title: 'GenAI for Everyone',
     company: 'Coursera',
     date: '2025',
@@ -144,6 +123,27 @@ export const certifications = [
     company: 'National Institute of Securities Markets (NISM)',
     date: '2025',
     description: 'Successfully completed the SEBI Investor Awareness Test, gaining knowledge on securities markets, investor rights, financial literacy, and regulatory practices under the Securities and Exchange Board of India (SEBI).'
+  },
+  {
+    icon: Award,
+    title: 'Blockchain & Smart Contracts',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Completed a comprehensive program on blockchain fundamentals and smart contract development.'
+  },
+  {
+    icon: Award,
+    title: 'Ethereum & Solidity Developer Program',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Specialized training in building decentralized applications on the Ethereum platform using Solidity.'
+  },
+  {
+    icon: Award,
+    title: 'Cryptography (CRISC 2023)',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Successfully completed specialized training in cryptography, covering encryption techniques, secure communication, and data protection methods aligned with industry practices.'
   },
   {
     icon: Award,
