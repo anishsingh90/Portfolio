@@ -114,7 +114,7 @@ export const timeline = [
     category: 'Education',
     date: '2022 - Present',
     title: 'B.Tech(Computer Science & Engineering) [7/10 CGPA]',
-    company: 'Maharishi Markandeshwar(Deemed To Be University), NAAC(A++)',
+    company: 'Maharishi Markandeshwar (Deemed To Be University), NAAC(A++)',
     description: 'Pursuing Computer Science and Engineering'
   },
   {
