@@ -253,7 +253,9 @@ export default function Home() {
                                     <item.icon className="h-12 w-12 text-primary" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                                <p className="text-sm text-muted-foreground mb-2">{item.company} - {item.date}</p>
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  <span className="text-primary font-medium">{item.company}</span> - <span className="text-primary font-medium">{item.date}</span>
+                                </p>
                                 <p className="text-muted-foreground">{item.description}</p>
                             </Card>
                         ))}
