@@ -50,13 +50,22 @@ export const localProjects = [
     dataAiHint: 'digital art'
   },
   {
-    title: 'DeFi Lending Protocol',
-    description: 'A decentralized lending and borrowing protocol that allows users to earn interest on deposits and borrow assets.',
-    technologies: ['Solidity', 'React', 'Web3.js', 'Chainlink Oracles', 'Aave'],
+    title: 'Secure and Transparent Transportation System',
+    description: 'Designed a Blockchain & IoT-powered transportation system to enable real-time vehicle tracking, automated payments, and secure data storage with Ethereum smart contracts.',
+    technologies: ['Blockchain', 'IoT', 'Ethereum', 'Smart Contracts', 'Solidity'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishsingh90/defi-lending',
-    liveDemo: 'https://defi-lending.anishkumar.dev',
-    dataAiHint: 'finance crypto'
+    github: '#',
+    liveDemo: '#',
+    dataAiHint: 'transportation logistics'
+  },
+  {
+    title: 'Ethereum-Based Employee Work Monitoring System',
+    description: 'Created a real-time employee work-tracking dApp using React.js, Solidity, and Web3.js, featuring on-chain task logging for enhanced transparency and security.',
+    technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethereum', 'dApp'],
+    image: 'https://placehold.co/600x400.png',
+    github: '#',
+    liveDemo: '#',
+    dataAiHint: 'employee tracking'
   },
 ];
 
