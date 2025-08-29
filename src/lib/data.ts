@@ -96,19 +96,36 @@ export const timeline = [
     icon: GraduationCap,
     category: 'Education',
     date: '2022 - Present',
-    title: 'Bachelor of Technology in Computer Science & Engineering [7/10 CGPA]',
-    company: 'Maharishi Markandeshwar(Deemed To Be University), Accredited by NAAC(A++)',
-    description: 'Specialized in distributed systems and cryptography. Graduated with honors.'
+    title: 'B.Tech(Computer Science & Engineering) [7/10 CGPA]',
+    company: 'Maharishi Markandeshwar(Deemed To Be University), NAAC(A++)',
+    description: 'Pursuing Computer Science and Engineering'
+  },
+];
+
+export const certifications = [
+  {
+    icon: Award,
+    title: 'Blockchain & Smart Contracts',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Completed a comprehensive program on blockchain fundamentals and smart contract development.'
   },
   {
     icon: Award,
-    category: 'Certification',
-    date: '2020',
-    title: 'Certified Blockchain Expert',
-    company: 'Blockchain Council',
-    description: 'Completed an in-depth certification covering various blockchain platforms and concepts.'
+    title: 'Ethereum & Solidity Developer Program',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Specialized training in building decentralized applications on the Ethereum platform using Solidity.'
+  },
+  {
+    icon: Award,
+    title: 'GenAI for Everyone',
+    company: 'Coursera',
+    date: '2025',
+    description: 'An introductory course on Generative AI, its applications, and its potential impact on various industries.'
   }
 ];
+
 
 export const passions = [
     {

@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalData, skills, achievements, timeline, passions, socialLinks, localProjects } from '@/lib/data';
+import { personalData, skills, achievements, timeline, passions, socialLinks, localProjects, certifications } from '@/lib/data';
 import Link from 'next/link';
 import { ExternalLink, Github, Send, Wallet } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -247,7 +247,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {timeline.filter(item => item.category === 'Certification').map((item) => (
+                        {certifications.map((item) => (
                             <Card key={item.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 bg-card/60 hover:-translate-y-2 border-border/30">
                                 <div className="flex justify-center mb-4">
                                     <item.icon className="h-12 w-12 text-primary" />
