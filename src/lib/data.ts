@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter, Code, Award, GraduationCap, Heart, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Code, Award, GraduationCap, Heart, Briefcase, Trophy } from 'lucide-react';
 import { EthereumIcon } from '@/components/icons';
 
 export const personalData = {
@@ -71,7 +71,7 @@ export const localProjects = [
 
 export const achievements = [
     {
-        icon: Award,
+        icon: Trophy,
         title: 'YourStory Digital Innovation Hackathon Winner',
         date: '2024',
         description: 'First place for developing an innovative decentralized application(dApps) which is "Decentralized Crowdfunding Application(dApps).'
