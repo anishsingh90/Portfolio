@@ -165,7 +165,7 @@ export default function Home() {
               </section>
               
               <Separator className="my-12 bg-border/20" />
-
+              
               {/* Projects Section */}
               <section id="projects" className="py-16">
                 <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
@@ -210,7 +210,7 @@ export default function Home() {
               <Separator className="my-12 bg-border/20" />
 
               {/* Timeline Section */}
-              <section id="timeline" className="py-16">
+              <section id="journey" className="py-16">
                 <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold text-center mb-10 font-headline">My Journey</CardTitle>
@@ -233,6 +233,31 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
+                  </CardContent>
+                </Card>
+              </section>
+              
+              <Separator className="my-12 bg-border/20" />
+
+              {/* Certification Section */}
+              <section id="certification" className="py-16">
+                <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                  <CardHeader>
+                    <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Certifications</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {timeline.filter(item => item.category === 'Certification').map((item) => (
+                            <Card key={item.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 bg-card/60 hover:-translate-y-2 border-border/30">
+                                <div className="flex justify-center mb-4">
+                                    <item.icon className="h-12 w-12 text-primary" />
+                                </div>
+                                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                                <p className="text-sm text-muted-foreground mb-2">{item.company} - {item.date}</p>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </Card>
+                        ))}
+                     </div>
                   </CardContent>
                 </Card>
               </section>

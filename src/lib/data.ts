@@ -16,7 +16,8 @@ export const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#achievements', label: 'Achievements' },
   { href: '#projects', label: 'Projects' },
-  { href: '#timeline', label: 'Journey' },
+  { href: '#journey', label: 'Journey' },
+  { href: '#certification', label: 'Certification' },
   { href: '#passions', label: 'Passions' },
   { href: '#connect', label: 'Connect' },
 ];
@@ -64,19 +65,13 @@ export const achievements = [
         icon: Award,
         title: 'YourStory Digital Innovation Hackathon Winner',
         date: '2024',
-        description: 'First place for developing an innovative decentralized application(dApps) which is "Decentralized Crowdfunding Application(dApps)"'
+        description: 'First place for developing an innovative decentralized application(dApps) which is "Decentralized Crowdfunding Application(dApps).'
     },
     {
         icon: Github,
-        title: 'Top Open Source Contributor',
-        date: '2025',
-        description: 'Recognized for significant contributions to the Hyperledger Fabric project.'
-    },
-    {
-        icon: Code,
-        title: 'Smart Contract Audit Challenge',
-        date: '2021',
-        description: 'Successfully identified and reported critical vulnerabilities in a major DeFi platform.'
+        title: 'Ongoing - Smart India Hackathon (SIH)',
+        date: '2024',
+        description: 'Developing a Secure Smart Contract and dApps to improve efficiency, transprancy, and automation in targeted industris.'
     }
 ];
 
@@ -100,9 +95,9 @@ export const timeline = [
   {
     icon: GraduationCap,
     category: 'Education',
-    date: '2015 - 2019',
-    title: 'Bachelor of Science in Computer Science',
-    company: 'University of Technology',
+    date: '2022 - Present',
+    title: 'Bachelor of Technology in Computer Science & Engineering [7/10 CGPA]',
+    company: 'Maharishi Markandeshwar(Deemed To Be University), Accredited by NAAC(A++)',
     description: 'Specialized in distributed systems and cryptography. Graduated with honors.'
   },
   {
@@ -118,8 +113,8 @@ export const timeline = [
 export const passions = [
     {
         icon: Heart,
-        title: 'DeFi Innovation',
-        description: 'Constantly exploring new decentralized finance protocols and looking for ways to improve financial accessibility for everyone.'
+        title: 'Forex and Crypto Trader',
+        description: 'Deeply passionate about financial markets-actively involved in trading crypto, forex and option selling in indian stock market.'
     },
     {
         icon: Code,
