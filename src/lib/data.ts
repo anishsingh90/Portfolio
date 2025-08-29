@@ -31,21 +31,21 @@ export const skills = {
 
 export const localProjects = [
   {
-    title: 'Decentralized Voting System',
-    description: 'A secure and transparent voting application built on the Ethereum blockchain, ensuring tamper-proof results.',
-    technologies: ['Solidity', 'React', 'Ethers.js', 'Hardhat', 'IPFS'],
+    title: 'Decentralized Crowdfunding System',
+    description: 'A blockchain-based dApp for secure and transparent fundraising, empowering creators and contributors with trustless smart contracts',
+    technologies: ['Solidity', 'React', 'Ethers.js', 'Hardhat', 'IPFS', 'Metamask'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishsingh90/d-vote',
-    liveDemo: 'https://d-vote.anishkumar.dev',
+    github: 'https://github.com/anishsingh90/1-Decentralised-CrowdFunding-Projects-dApps-',
+    liveDemo: 'https://decentraxfunding.netlify.app/',
     dataAiHint: 'blockchain network'
   },
   {
-    title: 'NFT Marketplace',
-    description: 'A full-featured platform for minting, buying, and selling Non-Fungible Tokens (NFTs) with low gas fees.',
-    technologies: ['Next.js', 'TypeScript', 'Solidity', 'Polygon', 'Tailwind CSS'],
+    title: 'Decentralized Personal Portfolio',
+    description: 'A full-featured portfolio built on the Ethereum blockchain with low gas fees.',
+    technologies: ['Next.js', 'Solidity', 'Metamask', 'Tailwind CSS'],
     image: 'https://placehold.co/600x400.png',
-    github: 'https://github.com/anishsingh90/nft-market',
-    liveDemo: 'https://nft-market.anishkumar.dev',
+    github: 'https://github.com/anishsingh90/Portfolio',
+    liveDemo: 'https://anishsinghpatel.netlify.app/',
     dataAiHint: 'digital art'
   },
   {
