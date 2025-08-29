@@ -55,7 +55,7 @@ export const localProjects = [
     technologies: ['Blockchain', 'IoT', 'Ethereum', 'Smart Contracts', 'Solidity'],
     image: '/transportation.jpg',
     github: 'https://github.com/anishsingh90/Secure-and-Transparent-Transportation-System-dApps-',
-    liveDemo: '#',
+    liveDemo: '',
     dataAiHint: 'transportation logistics'
   },
   {
@@ -64,7 +64,7 @@ export const localProjects = [
     technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethereum', 'dApp'],
     image: '/monitoring.jpg',
     github: 'https://github.com/anishsingh90/Employee-Live-Work-Monitoring-System-dApps-',
-    liveDemo: '#',
+    liveDemo: '',
     dataAiHint: 'employee tracking'
   },
 ];

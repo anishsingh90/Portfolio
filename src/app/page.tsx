@@ -188,16 +188,20 @@ export default function Home() {
                               ))}
                             </div>
                             <div className="flex gap-4 mt-auto pt-4">
-                              <Button asChild variant="ghost" size="sm">
-                                <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                                  <Github className="mr-2 h-4 w-4" /> GitHub
-                                </Link>
-                              </Button>
-                              <Button asChild variant="ghost" size="sm">
-                                <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                                  <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                                </Link>
-                              </Button>
+                              {project.github && (
+                                <Button asChild variant="ghost" size="sm">
+                                  <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                                    <Github className="mr-2 h-4 w-4" /> GitHub
+                                  </Link>
+                                </Button>
+                              )}
+                              {project.liveDemo && (
+                                <Button asChild variant="ghost" size="sm">
+                                  <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                                  </Link>
+                                </Button>
+                              )}
                             </div>
                           </CardContent>
                         </Card>
