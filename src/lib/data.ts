@@ -16,8 +16,7 @@ export const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#achievements', label: 'Achievements' },
   { href: '#projects', label: 'Projects' },
-  { href: '#timeline', label: 'Timeline' },
-  { href: '#experience', label: 'Experience' },
+  { href: '#timeline', label: 'Journey' },
   { href: '#passions', label: 'Passions' },
   { href: '#connect', label: 'Connect' },
 ];
