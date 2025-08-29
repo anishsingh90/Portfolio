@@ -35,7 +35,7 @@ export const localProjects = [
     title: 'Decentralized Crowdfunding System',
     description: 'A blockchain-based dApp for secure and transparent fundraising, empowering creators and contributors with trustless smart contracts',
     technologies: ['Solidity', 'React', 'Ethers.js', 'Hardhat', 'IPFS', 'Metamask'],
-    image: 'https://placehold.co/600x400.png',
+    image: '/crowdfunding.jpg',
     github: 'https://github.com/anishsingh90/1-Decentralised-CrowdFunding-Projects-dApps-',
     liveDemo: 'https://decentraxfunding.netlify.app/',
     dataAiHint: 'blockchain network'
