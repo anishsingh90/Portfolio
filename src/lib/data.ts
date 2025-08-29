@@ -82,15 +82,23 @@ export const timeline = [
     date: 'July 2025 - Present',
     title: 'Blockchain Community Intern',
     company: 'Trikon',
-    description: 'Lead developer for enterprise-grade blockchain applications. Designed and implemented scalable smart contracts and backend systems.'
+    description: 'Achieved 40% product revenue growth in three months by planning and launching four new key features. Improved state test pass rates from 78% to 87% in two years.'
   },
   {
     icon: Briefcase,
     category: 'Experience',
-    date: '2019 - 2021',
-    title: 'Blockchain Developer',
-    company: 'CryptoBuilders Inc.',
-    description: 'Developed and maintained smart contracts for various DeFi and NFT projects. Contributed to frontend development using React.'
+    date: 'June 2024 - July 2024',
+    title: 'Blockchain Developer Intern',
+    company: 'BlackHole Infiverse',
+    description: 'Developed and deployed Solidity-based smart contracts for a Web3 marketplace, optimizing security and efficiency. Integrated Ether.js & Web3.js for interacting with Ethereum Blockchain.'
+  },
+  {
+    icon: Briefcase,
+    category: 'Experience',
+    date: 'April 2024 - October 2024',
+    title: 'Web Developer Intern',
+    company: 'Internship Studio',
+    description: 'Gained hands-on experience in front-end web development, working with HTML, CSS, JavaScript, and React.js.'
   },
   {
     icon: GraduationCap,
@@ -126,6 +134,20 @@ export const certifications = [
   },
   {
     icon: Award,
+    title: 'Alice Blue Business Partner',
+    company: 'Alice Blue Financial Services',
+    date: '2024',
+    description: 'Certified as an approved Alice Blue Business Partner, contributing to client acquisition, financial market awareness, and trading-related services under Alice Blue’s partnership program.'
+  },
+  {
+    icon: Award,
+    title: 'Cryptography (CRISC 2023)',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Successfully completed specialized training in cryptography, covering encryption techniques, secure communication, and data protection methods aligned with industry practices.'
+  },
+  {
+    icon: Award,
     title: 'Blockchain & Smart Contracts',
     company: 'Infosys Springboard',
     date: '2024',
@@ -137,20 +159,6 @@ export const certifications = [
     company: 'Infosys Springboard',
     date: '2024',
     description: 'Specialized training in building decentralized applications on the Ethereum platform using Solidity.'
-  },
-  {
-    icon: Award,
-    title: 'Cryptography (CRISC 2023)',
-    company: 'Infosys Springboard',
-    date: '2024',
-    description: 'Successfully completed specialized training in cryptography, covering encryption techniques, secure communication, and data protection methods aligned with industry practices.'
-  },
-  {
-    icon: Award,
-    title: 'Alice Blue Business Partner',
-    company: 'Alice Blue Financial Services',
-    date: '2024',
-    description: 'Certified as an approved Alice Blue Business Partner, contributing to client acquisition, financial market awareness, and trading-related services under Alice Blue’s partnership program.'
   },
   {
     icon: Award,
