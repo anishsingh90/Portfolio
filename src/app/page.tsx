@@ -32,7 +32,7 @@ export default function Home() {
   const [summary, setSummary] = useState("I am a skilled blockchain developer with experience in creating decentralized applications. I am passionate about leveraging blockchain technology to build innovative solutions.");
   const [ethAmount, setEthAmount] = useState('');
   const [isSending, setIsSending] = useState(false);
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
+  const [contactForm, setContactForm] = useState({ name: '', mobile: '', message: '' });
 
   const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setContactForm({ ...contactForm, [e.target.id]: e.target.value });
@@ -40,8 +40,8 @@ export default function Home() {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, email, message } = contactForm;
-    const mailtoLink = `mailto:${personalData.email}?subject=Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${name}%0D%0AEmail: ${email}`;
+    const { name, mobile, message } = contactForm;
+    const mailtoLink = `mailto:${personalData.email}?subject=Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${name}%0D%0AMobile: ${mobile}`;
     window.location.href = mailtoLink;
   };
 
@@ -329,8 +329,8 @@ export default function Home() {
                              <Input id="name" placeholder="Enter your name" value={contactForm.name} onChange={handleContactFormChange} />
                            </div>
                            <div className="space-y-2">
-                             <Label htmlFor="email">Email</Label>
-                             <Input id="email" type="email" placeholder="Enter your email" value={contactForm.email} onChange={handleContactFormChange} />
+                             <Label htmlFor="mobile">Mobile Number</Label>
+                             <Input id="mobile" type="text" placeholder="Enter your mobile number" value={contactForm.mobile} onChange={handleContactFormChange} />
                            </div>
                          </div>
                          <div className="space-y-2">
