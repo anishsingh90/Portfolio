@@ -123,6 +123,13 @@ export const certifications = [
     company: 'Coursera',
     date: '2025',
     description: 'An introductory course on Generative AI, its applications, and its potential impact on various industries.'
+  },
+  {
+    icon: Award,
+    title: 'Nestlé E-Learning | Sustainability',
+    company: 'Nestlé',
+    date: '2025',
+    description: 'Completed specialized training focused on sustainability practices, environmental responsibility, and sustainable business approaches through Nestlé’s E-Learning platform.'
   }
 ];
 
