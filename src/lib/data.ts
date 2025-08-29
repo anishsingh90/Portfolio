@@ -44,7 +44,7 @@ export const localProjects = [
     title: 'Decentralized Personal Portfolio',
     description: 'A full-featured portfolio built on the Ethereum blockchain with low gas fees.',
     technologies: ['Next.js', 'Solidity', 'Metamask', 'Tailwind CSS'],
-    image: 'https://placehold.co/600x400.png',
+    image: '/porfolio.jpg',
     github: 'https://github.com/anishsingh90/Portfolio',
     liveDemo: 'https://anishsinghpatel.netlify.app/',
     dataAiHint: 'digital art'
