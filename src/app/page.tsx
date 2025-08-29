@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -31,6 +32,19 @@ export default function Home() {
   const [summary, setSummary] = useState("I am a skilled blockchain developer with experience in creating decentralized applications. I am passionate about leveraging blockchain technology to build innovative solutions.");
   const [ethAmount, setEthAmount] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
+
+  const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setContactForm({ ...contactForm, [e.target.id]: e.target.value });
+  };
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, message } = contactForm;
+    const mailtoLink = `mailto:${personalData.email}?subject=Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${name}%0D%0AEmail: ${email}`;
+    window.location.href = mailtoLink;
+  };
+
 
   const handleSendEth = async () => {
     if (!provider || !account) {
@@ -308,20 +322,20 @@ export default function Home() {
                        <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Connect With Me</CardTitle>
                      </CardHeader>
                      <CardContent>
-                       <form className="space-y-4">
+                       <form className="space-y-4" onSubmit={handleContactSubmit}>
                          <div className="grid md:grid-cols-2 gap-4">
                            <div className="space-y-2">
                              <Label htmlFor="name">Name</Label>
-                             <Input id="name" placeholder="Enter your name" />
+                             <Input id="name" placeholder="Enter your name" value={contactForm.name} onChange={handleContactFormChange} />
                            </div>
                            <div className="space-y-2">
                              <Label htmlFor="email">Email</Label>
-                             <Input id="email" type="email" placeholder="Enter your email" />
+                             <Input id="email" type="email" placeholder="Enter your email" value={contactForm.email} onChange={handleContactFormChange} />
                            </div>
                          </div>
                          <div className="space-y-2">
                            <Label htmlFor="message">Message</Label>
-                           <Textarea id="message" placeholder="Your message" className="min-h-[150px]" />
+                           <Textarea id="message" placeholder="Your message" className="min-h-[150px]" value={contactForm.message} onChange={handleContactFormChange} />
                          </div>
                          <div className="flex justify-end">
                            <Button type="submit">
@@ -384,5 +398,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
