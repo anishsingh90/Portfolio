@@ -119,6 +119,13 @@ export const certifications = [
   },
   {
     icon: Award,
+    title: 'Cryptography (CRISC 2023)',
+    company: 'Infosys Springboard',
+    date: '2024',
+    description: 'Successfully completed specialized training in cryptography, covering encryption techniques, secure communication, and data protection methods aligned with industry practices.'
+  },
+  {
+    icon: Award,
     title: 'GenAI for Everyone',
     company: 'Coursera',
     date: '2025',
