@@ -137,6 +137,13 @@ export const certifications = [
     company: 'National Institute of Securities Markets (NISM)',
     date: '2025',
     description: 'Successfully completed the SEBI Investor Awareness Test, gaining knowledge on securities markets, investor rights, financial literacy, and regulatory practices under the Securities and Exchange Board of India (SEBI).'
+  },
+  {
+    icon: Award,
+    title: 'Alice Blue Business Partner',
+    company: 'Alice Blue Financial Services',
+    date: '2024',
+    description: 'Certified as an approved Alice Blue Business Partner, contributing to client acquisition, financial market awareness, and trading-related services under Alice Blue’s partnership program.'
   }
 ];
 
