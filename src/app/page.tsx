@@ -123,7 +123,7 @@ export default function Home() {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {Object.entries(skills).map(([category, skillList]) => (
-                        <Card key={category} className="hover:shadow-lg transition-shadow duration-300 bg-card/60 border-border/30">
+                        <Card key={category} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
                           <CardHeader>
                             <CardTitle className="text-primary">{category}</CardTitle>
                           </CardHeader>
@@ -384,3 +384,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
