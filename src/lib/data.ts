@@ -53,7 +53,7 @@ export const localProjects = [
     title: 'Secure and Transparent Transportation System',
     description: 'Designed a Blockchain & IoT-powered transportation system to enable real-time vehicle tracking, automated payments, and secure data storage with Ethereum smart contracts.',
     technologies: ['Blockchain', 'IoT', 'Ethereum', 'Smart Contracts', 'Solidity'],
-    image: 'https://placehold.co/600x400.png',
+    image: '/transportation.jpg',
     github: '#',
     liveDemo: '#',
     dataAiHint: 'transportation logistics'
