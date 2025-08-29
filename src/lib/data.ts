@@ -63,7 +63,7 @@ export const localProjects = [
     description: 'Created a real-time employee work-tracking dApp using React.js, Solidity, and Web3.js, featuring on-chain task logging for enhanced transparency and security.',
     technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethereum', 'dApp'],
     image: '/monitoring.jpg',
-    github: '#',
+    github: 'https://github.com/anishsingh90/Employee-Live-Work-Monitoring-System-dApps-',
     liveDemo: '#',
     dataAiHint: 'employee tracking'
   },
