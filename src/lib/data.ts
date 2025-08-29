@@ -130,6 +130,13 @@ export const certifications = [
     company: 'Nestlé',
     date: '2025',
     description: 'Completed specialized training focused on sustainability practices, environmental responsibility, and sustainable business approaches through Nestlé’s E-Learning platform.'
+  },
+  {
+    icon: Award,
+    title: 'SEBI Investor Awareness Test',
+    company: 'National Institute of Securities Markets (NISM)',
+    date: '2025',
+    description: 'Successfully completed the SEBI Investor Awareness Test, gaining knowledge on securities markets, investor rights, financial literacy, and regulatory practices under the Securities and Exchange Board of India (SEBI).'
   }
 ];
 
