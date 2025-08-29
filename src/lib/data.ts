@@ -151,6 +151,13 @@ export const certifications = [
     company: 'Alice Blue Financial Services',
     date: '2024',
     description: 'Certified as an approved Alice Blue Business Partner, contributing to client acquisition, financial market awareness, and trading-related services under Alice Blue’s partnership program.'
+  },
+  {
+    icon: Award,
+    title: 'Website Design & Development Internship',
+    company: 'Internship Studio',
+    date: '2024',
+    description: 'Completed training in website design and development, gaining hands-on experience in front-end and back-end technologies, UI/UX practices, and responsive web development.'
   }
 ];
 
