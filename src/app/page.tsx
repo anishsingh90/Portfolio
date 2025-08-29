@@ -232,7 +232,7 @@ export default function Home() {
                           <div className="z-10 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full">
                             <item.icon className="mx-auto text-primary-foreground h-6 w-6"/>
                           </div>
-                          <div className="order-1 bg-card/80 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-border/30">
+                          <div className="order-1 bg-card/80 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-border/30 transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2">
                             <p className="text-sm text-muted-foreground mb-1">{item.date}</p>
                             <h3 className="font-bold text-lg">{item.title}</h3>
                             <h4 className="font-medium text-primary">{item.company}</h4>
