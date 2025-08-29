@@ -28,6 +28,7 @@ export const skills = {
   'Databases': ['GraphQL', 'MongoDB', 'MySQL'],
   'Tools & Platforms': ['RemixIDE', 'Infura','Alchemy', 'VS-Code', 'ThirdwebSDK', 'Git & GitHub', 'Oracles'],
   'Blockchain': ['Ethereum', 'Hyperledger Fabric', 'Smart Contracts', 'DeFi', 'NFTs', 'Metaverse', 'Cryptography', 'Merkle Tree'],
+  'Others': ['Problem Solving', 'Communication', 'Eager to learn'],
 };
 
 export const localProjects = [
