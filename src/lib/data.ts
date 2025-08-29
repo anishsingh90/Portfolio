@@ -117,6 +117,22 @@ export const timeline = [
     company: 'Maharishi Markandeshwar(Deemed To Be University), NAAC(A++)',
     description: 'Pursuing Computer Science and Engineering'
   },
+  {
+    icon: GraduationCap,
+    category: 'Education',
+    date: '2022',
+    title: '12th Grade (64.4%)',
+    company: 'Bihar School Examination Board',
+    description: 'Completed 12th standard education.'
+  },
+  {
+    icon: GraduationCap,
+    category: 'Education',
+    date: '2020',
+    title: '10th Grade (77.4%)',
+    company: 'Bihar School Examination Board',
+    description: 'Completed 10th standard education.'
+  },
 ];
 
 export const certifications = [
