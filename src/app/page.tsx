@@ -327,11 +327,11 @@ export default function Home() {
                          <div className="grid md:grid-cols-2 gap-4">
                            <div className="space-y-2">
                              <Label htmlFor="name">Name</Label>
-                             <Input id="name" placeholder="Enter your name" value={contactForm.name} onChange={handleContactFormChange} />
+                             <Input id="name" placeholder="Enter your name" value={contactForm.name} onChange={handleContactFormChange} autoComplete="off" />
                            </div>
                            <div className="space-y-2">
                              <Label htmlFor="mobile">Mobile Number</Label>
-                             <Input id="mobile" type="text" placeholder="Enter your mobile number" value={contactForm.mobile} onChange={handleContactFormChange} />
+                             <Input id="mobile" type="text" placeholder="Enter your mobile number" value={contactForm.mobile} onChange={handleContactFormChange} autoComplete="off" />
                            </div>
                          </div>
                          <div className="space-y-2">
