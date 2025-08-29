@@ -148,16 +148,20 @@ export default function Home() {
                     <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Key Achievements</CardTitle>
                   </CardHeader>
                   <CardContent>
-                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {achievements.map((achievement) => (
-                            <Card key={achievement.title} className="text-center p-6 hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 bg-card/60 hover:-translate-y-2 border-border/30">
-                                <div className="flex justify-center mb-4">
-                                    <achievement.icon className="h-12 w-12 text-primary" />
-                                </div>
-                                <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                                <p className="text-sm text-muted-foreground mb-2">{achievement.date}</p>
-                                <p className="text-muted-foreground">{achievement.description}</p>
-                            </Card>
+                          <Card key={achievement.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
+                            <CardHeader>
+                               <div className="flex items-center gap-4">
+                                  <achievement.icon className="h-12 w-12 text-primary" />
+                                  <CardTitle>{achievement.title}</CardTitle>
+                               </div>
+                            </CardHeader>
+                            <CardContent className="flex-grow flex flex-col">
+                               <p className="text-sm text-muted-foreground mb-4">{achievement.date}</p>
+                               <p className="text-muted-foreground flex-grow">{achievement.description}</p>
+                            </CardContent>
+                          </Card>
                         ))}
                      </div>
                   </CardContent>
