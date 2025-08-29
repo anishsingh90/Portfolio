@@ -62,7 +62,7 @@ export const localProjects = [
     title: 'Ethereum-Based Employee Live Work Monitoring System',
     description: 'Created a real-time employee work-tracking dApp using React.js, Solidity, and Web3.js, featuring on-chain task logging for enhanced transparency and security.',
     technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethereum', 'dApp'],
-    image: 'https://placehold.co/600x400.png',
+    image: '/monitoring.jpg',
     github: '#',
     liveDemo: '#',
     dataAiHint: 'employee tracking'
