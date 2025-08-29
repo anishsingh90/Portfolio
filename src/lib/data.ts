@@ -77,7 +77,7 @@ export const achievements = [
         description: 'First place for developing an innovative decentralized application(dApps) which is "Decentralized Crowdfunding Application(dApps).'
     },
     {
-        icon: Github,
+        icon: Code,
         title: 'Ongoing - Smart India Hackathon (SIH)',
         date: '2024',
         description: 'Developing a Secure Smart Contract and dApps to improve efficiency, transprancy, and automation in targeted industris.'
