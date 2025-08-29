@@ -54,7 +54,7 @@ export const localProjects = [
     description: 'Designed a Blockchain & IoT-powered transportation system to enable real-time vehicle tracking, automated payments, and secure data storage with Ethereum smart contracts.',
     technologies: ['Blockchain', 'IoT', 'Ethereum', 'Smart Contracts', 'Solidity'],
     image: '/transportation.jpg',
-    github: '#',
+    github: 'https://github.com/anishsingh90/Secure-and-Transparent-Transportation-System-dApps-',
     liveDemo: '#',
     dataAiHint: 'transportation logistics'
   },
