@@ -236,6 +236,36 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </section>
+
+              <Separator className="my-12 bg-border/20" />
+              
+              {/* Experience Section */}
+              <section id="experience" className="py-16">
+                <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                  <CardHeader>
+                    <CardTitle className="text-3xl font-bold text-center mb-10 font-headline">Experience</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="relative max-w-2xl mx-auto">
+                      <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
+                      {timeline.map((item, index) => (
+                        <div key={item.title} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                          <div className="order-1 w-5/12"></div>
+                          <div className="z-10 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full">
+                            <item.icon className="mx-auto text-primary-foreground h-6 w-6"/>
+                          </div>
+                          <div className="order-1 bg-card/80 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-border/30">
+                            <p className="text-sm text-muted-foreground mb-1">{item.date}</p>
+                            <h3 className="font-bold text-lg">{item.title}</h3>
+                            <h4 className="font-medium text-primary">{item.company}</h4>
+                            <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </section>
               
               <Separator className="my-12 bg-border/20" />
               
