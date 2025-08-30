@@ -317,13 +317,13 @@ export default function Home() {
 
               {/* Connect Section */}
               <section id="connect" className="py-16">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                   <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
                      <CardHeader>
                        <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Connect With Me</CardTitle>
                      </CardHeader>
-                     <CardContent>
-                       <form className="space-y-4" onSubmit={handleContactSubmit}>
+                     <CardContent className="flex-grow flex flex-col">
+                       <form className="flex flex-col flex-grow space-y-4" onSubmit={handleContactSubmit}>
                          <div className="grid md:grid-cols-2 gap-4">
                            <div className="space-y-2">
                              <Label htmlFor="name">Name</Label>
@@ -334,9 +334,9 @@ export default function Home() {
                              <Input id="mobile" type="text" placeholder="Enter your mobile number" value={contactForm.mobile} onChange={handleContactFormChange} autoComplete="off" />
                            </div>
                          </div>
-                         <div className="space-y-2">
+                         <div className="space-y-2 flex-grow flex flex-col">
                            <Label htmlFor="message">Message</Label>
-                           <Textarea id="message" placeholder="Your message" className="min-h-[150px]" value={contactForm.message} onChange={handleContactFormChange} />
+                           <Textarea id="message" placeholder="Your message" className="min-h-[150px] flex-grow" value={contactForm.message} onChange={handleContactFormChange} />
                          </div>
                          <div className="flex justify-end">
                            <Button type="submit">
@@ -348,14 +348,14 @@ export default function Home() {
                      </CardContent>
                    </Card>
                    
-                   <Card className="bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
                      <CardHeader>
                        <CardTitle className="text-3xl font-bold text-center mb-2 font-headline">Support My Work</CardTitle>
                        <CardDescription className="text-center text-muted-foreground">
                          If you like my work, consider sending some ETH.
                        </CardDescription>
                      </CardHeader>
-                     <CardContent>
+                     <CardContent className="flex-grow flex flex-col justify-center">
                         <div className="space-y-4">
                           <div className="space-y-2">
                             <Label htmlFor="eth-amount">Amount (ETH)</Label>
