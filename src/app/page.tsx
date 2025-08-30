@@ -18,6 +18,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useWallet } from '@/context/wallet-context';
 import { ethers } from 'ethers';
 import { useToast } from '@/hooks/use-toast';
+import { useTypingEffect } from '@/hooks/use-typing-effect';
 
 
 // NOTE: The project registry address is no longer used for fetching projects, but is kept for other potential blockchain interactions.
@@ -33,6 +34,8 @@ export default function Home() {
   const [ethAmount, setEthAmount] = useState('');
   const [isSending, setIsSending] = useState(false);
   const [contactForm, setContactForm] = useState({ name: '', mobile: '', message: '' });
+
+  const typedName = useTypingEffect(`Hi, I'm ${personalData.name}`, 100);
 
   const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setContactForm({ ...contactForm, [e.target.id]: e.target.value });
@@ -92,8 +95,8 @@ export default function Home() {
           <section id="about" className="py-20 md:py-32 grid md:grid-cols-5 gap-8 items-center">
             <div className="md:col-span-3 space-y-4">
               <Badge variant="secondary" className="text-base">{greeting}</Badge>
-              <h1 className="text-4xl md:text-6xl font-bold text-primary font-headline">
-                Hi, I&apos;m {personalData.name}
+              <h1 className="text-4xl md:text-6xl font-bold text-primary font-headline min-h-[4rem] md:min-h-[6rem]">
+                {typedName}
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium text-foreground/80 font-headline">
                 {personalData.title}
