@@ -318,7 +318,7 @@ export default function Home() {
               {/* Connect Section */}
               <section id="connect" className="py-16">
                 <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/30">
                      <CardHeader>
                        <CardTitle className="text-3xl font-bold text-center mb-6 font-headline">Connect With Me</CardTitle>
                      </CardHeader>
@@ -348,7 +348,7 @@ export default function Home() {
                      </CardContent>
                    </Card>
                    
-                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/10 transition-shadow duration-300 border-border/20">
+                   <Card className="flex flex-col bg-card/50 shadow-lg hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/30">
                      <CardHeader>
                        <CardTitle className="text-3xl font-bold text-center mb-2 font-headline">Support My Work</CardTitle>
                        <CardDescription className="text-center text-muted-foreground">
