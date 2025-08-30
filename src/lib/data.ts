@@ -192,6 +192,20 @@ export const certifications = [
     company: 'Internship Studio',
     date: '2024',
     description: 'Completed training in website design and development, gaining hands-on experience in front-end and back-end technologies, UI/UX practices, and responsive web development.'
+  },
+  {
+    icon: Award,
+    title: 'Stock Market Trading',
+    company: 'Internshala Trainings',
+    date: '2023',
+    description: 'Completed a 6-week online training covering stock market fundamentals, key terminologies, market players, share analysis, derivatives basics, and final project work.'
+  },
+  {
+    icon: Award,
+    title: 'Programming with C and C++',
+    company: 'Internshala Trainings',
+    date: '2023',
+    description: 'Completed an 8-week training focused on C and C++ programming, including fundamentals, object-oriented concepts, and hands-on projects such as building a cricket game application.'
   }
 ];
 
