@@ -165,7 +165,7 @@ export default function Home() {
                   <CardContent>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {achievements.map((achievement) => (
-                          <Card key={achievement.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30">
+                          <Card key={achievement.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 bg-card/60 hover:-translate-y-2 border-border/30 p-6">
                             <CardHeader>
                                <div className="flex items-center gap-4">
                                   <achievement.icon className="h-12 w-12 text-primary" />
@@ -298,15 +298,15 @@ export default function Home() {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {passions.map((passion) => (
-                        <div key={passion.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-card/70 transition-colors">
-                          <div className="bg-primary/10 p-3 rounded-full">
-                            <passion.icon className="h-6 w-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-semibold">{passion.title}</h3>
+                         <Card key={passion.title} className="p-6 hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 bg-card/60 hover:-translate-y-2 border-border/30">
+                            <div className="flex items-center gap-4 mb-4">
+                              <div className="bg-primary/10 p-3 rounded-full">
+                                <passion.icon className="h-8 w-8 text-primary" />
+                              </div>
+                              <h3 className="text-xl font-semibold">{passion.title}</h3>
+                            </div>
                             <p className="text-muted-foreground mt-1">{passion.description}</p>
-                          </div>
-                        </div>
+                         </Card>
                       ))}
                     </div>
                   </CardContent>
